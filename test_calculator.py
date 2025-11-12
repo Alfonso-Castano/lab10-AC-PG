@@ -63,7 +63,7 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            log(0, 4)
+            logarithm(0, 4)
     # def test_hypotenuse(self): # 3 assertions
     #     fill in code
     def test_hypotenuse(self):
