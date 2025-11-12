@@ -1,3 +1,6 @@
+# https://github.com/Alfonso-Castano/lab10-AC-PG.git
+#Partner 1: Alfonso Castano
+#Partner 2: Pedro Guevera
 """
 calculator.py
 - Defines functions used to create a simple calculator
