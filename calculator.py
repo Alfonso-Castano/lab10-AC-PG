@@ -12,10 +12,9 @@ One function per operation, in order.
 import math
 #math functions
 def square_root(a):
-    try:
-        return math.sqrt(a)
-    except ValueError:
-        print("Can't square a negative number")
+    if a < 0:
+        raise ValueError("Cannot take square root of negative number")
+    return math.sqrt(a)
 
 def hypotenuse(a, b):
     return math.hypot(a, b)
@@ -23,23 +22,21 @@ def hypotenuse(a, b):
 def add(a, b): 
     return a+b
 
-def sub(a, b):
+def subtract(a, b):
     return a-b
 
 def mul(a, b):
     return a*b
 
 def div(a, b):
-    try:
-        return b/a
-    except ZeroDivisionError:
-        print("Can't divide by zero")
+    if b == 0:
+        raise ZeroDivisionError("Cannot divide by zero")
+    return a / b
 
-def log(a, b):
-    try:
-        return math.log(b , a)
-    except ValueError:
-        print("Can't take the logarithm of a negative number")
+def logarithm(a, b):
+    if a <= 0 or a == 1 or b <= 0:
+        raise ValueError("Invalid logarithm base or argument")
+    return math.log(b, a)
 
 def exp(a, b):
     return a ** b
