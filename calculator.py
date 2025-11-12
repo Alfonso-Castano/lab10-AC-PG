@@ -31,9 +31,9 @@ def mul(a, b):
 def div(a, b):
     if b == 0:
         raise ZeroDivisionError("Cannot divide by zero")
-    return a / b
+    return b / a
 
-def logarithm(a, b):
+def log(a, b):
     if a <= 0 or a == 1 or b <= 0:
         raise ValueError("Invalid logarithm base or argument")
     return math.log(b, a)
